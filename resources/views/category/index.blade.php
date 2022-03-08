@@ -6,7 +6,7 @@
     <div class="col-lg-3">
         <div class="bs-callout {{ $bgCallouts[array_rand($bgCallouts,1)] }}">
             <a href="{{ route('category.detail', $category->id) }}">{{ $category->name }}</a>
-            <p>Total Buku : {{ count($category->book) }}</p>
+            <p>Total Buku : {{ $category->books_count }}</p>
         </div>
     </div>
     @endforeach

@@ -10,7 +10,7 @@ class CategoryController extends Controller
 {
     public function index(){
 
-        $categories = Category::all();
+        $categories = Category::withCount('books')->with('books')->get();
         $bgCallouts = array("bs-callout-primary", "bs-callout-success", "bs-callout-warning", "bs-callout-danger");
 
         return view('category.index', compact('categories', 'bgCallouts'));
@@ -18,10 +18,12 @@ class CategoryController extends Controller
 
     public function detail($id){
 
-        $category = Category::whereId($id)->firstOrFail();
-        $books = Book::whereCategoryId($id)->get();
+        $category = Category::whereId($id)->with(['books' => function ($query) {
+            $query->with('category');
+        }])->firstOrFail();
+        // $books = Book::whereCategoryId($id)->get();
 
-        return view('category.detail', compact('books', 'category'));
+        return view('category.detail', compact('category'));
     }
 
 }

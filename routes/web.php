@@ -25,3 +25,4 @@ Route::get('/category', [CategoryController::class, 'index'])->name('category');
 Route::get('/category-detail/{id}', [CategoryController::class, 'detail'])->name('category.detail');
 Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
 Route::get('/student', [StudentController::class, 'index'])->name('student');
+Route::get('/student-detail/{id}', [StudentController::class, 'detail'])->name('student.detail');

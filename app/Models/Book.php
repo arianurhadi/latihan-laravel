@@ -17,4 +17,12 @@ class Book extends Model
         return $this->hasOne(Category::class, 'id', 'category_id');
     }
 
+    public function users() {
+        return $this->belongsToMany(User::class);
+    }
+
+    public function reviews(){
+        return $this->morphMany(Review::class, 'reviewable');
+    }
+
 }

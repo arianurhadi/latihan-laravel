@@ -19,7 +19,7 @@
             <tr>
                 <td>{{ $loop->iteration }}</td>
                 <td>{{ $user->student->nis }}</td>
-                <td>{{ $user->name }}</td>
+                <td><a href="{{ route('student.detail', $user->id) }}">{{ $user->name }}</a></td>
                 <td>{{ $user->email }}</td>
                 <td>{{ $user->student->phone }}</td>
             </tr>

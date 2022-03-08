@@ -51,8 +51,8 @@ class User extends Authenticatable
         return $query->whereRole('user');
     }
 
-    public function user(){
-        return $this->all();
+    public function books() {
+        return $this->belongsToMany(Book::class);
     }
 
 }

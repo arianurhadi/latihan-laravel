@@ -16,12 +16,7 @@ class Category extends Model
 
     public $timestamps = false;
     
-    public function book() {
+    public function books() {
         return $this->hasMany(Book::class);
     }
-
-    public function getBookCount(){
-        return $this->withCount()->book;
-    }
-
 }
