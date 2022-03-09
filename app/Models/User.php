@@ -47,8 +47,8 @@ class User extends Authenticatable
         return $this->hasOne(Student::class, 'user_id');
     }
 
-    public function scopeIsUser($query) {
-        return $query->whereRole('user');
+    public function scopeIsStudent($query) {
+        return $query->whereRole('student');
     }
 
     public function books() {
