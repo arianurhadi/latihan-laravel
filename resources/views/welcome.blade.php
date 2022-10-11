@@ -133,6 +133,7 @@
             console.log('ab')
             console.log('fandi')
             const body = document.body;
+            const head = document.head;
         </script>
     </body>
 </html>
