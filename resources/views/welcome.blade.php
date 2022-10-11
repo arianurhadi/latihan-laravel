@@ -131,6 +131,7 @@
         <script>
             console.log('aa')
             console.log('ab')
+            console.log('fandi')
         </script>
     </body>
 </html>
