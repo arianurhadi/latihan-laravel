@@ -132,6 +132,7 @@
             console.log('aa')
             console.log('ab')
             console.log('fandi')
+            const body = document.body;
         </script>
     </body>
 </html>
