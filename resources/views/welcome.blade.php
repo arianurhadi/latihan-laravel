@@ -130,6 +130,7 @@
         </div>
         <script>
             console.log('aa')
+            console.log('ab')
         </script>
     </body>
 </html>
