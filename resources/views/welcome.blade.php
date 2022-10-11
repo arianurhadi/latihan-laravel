@@ -131,6 +131,7 @@
         <script>
             console.log('aa')
             console.log('ab')
+            const body = document.body;
         </script>
     </body>
 </html>
